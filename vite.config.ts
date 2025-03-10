@@ -7,6 +7,13 @@ export default defineConfig({
   server: {
     port: 3001,
     strictPort: true,
+    allowedHosts: ['*'],
+  },
+  preview: {
+    allowedHosts: ['*'],
+    headers: {
+      'ngrok-skip-browser-warning': true,
+    },
   },
   plugins: [
     react(),
