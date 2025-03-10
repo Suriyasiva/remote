@@ -8,11 +8,26 @@ export default defineConfig({
     port: 3001,
     strictPort: true,
     allowedHosts: ['*'],
+    proxy: {
+      '/assets/remoteEntry.js': {
+        target: 'https://warm-speculoos-478d3e.netlify.app',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
   preview: {
     allowedHosts: ['*'],
     headers: {
       'ngrok-skip-browser-warning': true,
+      'Access-Control-Allow-Origin': '*',
+    },
+    proxy: {
+      '/assets/remoteEntry.js': {
+        target: 'https://warm-speculoos-478d3e.netlify.app',
+        changeOrigin: true,
+        secure: false,
+      },
     },
   },
   plugins: [
