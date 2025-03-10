@@ -7,14 +7,15 @@ export default defineConfig({
   server: {
     port: 3001,
     strictPort: true,
-    allowedHosts: ['*'],
+    allowedHosts: true,
     cors: false,
   },
   preview: {
-    allowedHosts: ['*'],
+    allowedHosts: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+
     cors: false,
   },
   plugins: [
