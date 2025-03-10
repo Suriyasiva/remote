@@ -8,15 +8,14 @@ export default defineConfig({
     port: 3001,
     strictPort: true,
     allowedHosts: true,
-    cors: false,
+    cors: true,
   },
   preview: {
     allowedHosts: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
-
-    cors: false,
+    cors: true,
   },
   plugins: [
     react(),
