@@ -7,8 +7,10 @@ export default defineConfig({
   server: {
     port: 3001,
     strictPort: true,
-    allowedHosts: true,
-    cors: false,
+    allowedHosts: ['http://localhost:3000'],
+    cors: {
+      origin: ['http://localhost:3000'],
+    },
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
@@ -17,14 +19,16 @@ export default defineConfig({
     },
   },
   preview: {
-    allowedHosts: true,
+    allowedHosts: ['http://localhost:3000'],
+    cors: {
+      origin: ['http://localhost:3000'],
+    },
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
       'Access-Control-Allow-Headers':
         'X-Requested-With, content-type, Authorization',
     },
-    cors: false,
   },
   plugins: [
     react(),
