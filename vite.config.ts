@@ -8,14 +8,23 @@ export default defineConfig({
     port: 3001,
     strictPort: true,
     allowedHosts: true,
-    cors: true,
+    cors: false,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization',
+    },
   },
   preview: {
     allowedHosts: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization',
     },
-    cors: true,
+    cors: false,
   },
   plugins: [
     react(),
