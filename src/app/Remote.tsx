@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
-import User from './pages/User';
+import TempUser from './pages/TempUser';
+
+
 
 function Remote() {
   return (
     <Routes>
-      <Route path='/user/:userId' element={<User />} />
+      <Route path='/user/:userId' element={<TempUser/>} />
     </Routes>
   );
 }
