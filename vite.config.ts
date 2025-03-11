@@ -9,7 +9,7 @@ export default defineConfig({
     strictPort: true,
     allowedHosts: ['http://localhost:3000'],
     cors: {
-      origin:['http://localhost:3000']
+      origin: ['http://localhost:3000'],
     },
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -37,8 +37,8 @@ export default defineConfig({
         './User': './src/app/pages/User.tsx',
       },
       shared: {
-        react: { requiredVersion: '^18.0.0' },
-        'react-dom': { requiredVersion: '^18.0.0' },
+        react: { requiredVersion: '^19.0.0' },
+        'react-dom': { requiredVersion: '^19.0.0' },
         'react-router-dom': { requiredVersion: '6' },
         '@chakra-ui/react': { requiredVersion: '2' },
         '@emotion/react': { requiredVersion: '^11.14.0' },
