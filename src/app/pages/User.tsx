@@ -8,15 +8,15 @@ import {
   Text,
   Box,
 } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/data';
 
 function User() {
   const params = useParams();
-  const [selectedUser, setSelectedUser] = useState<any>(null);
+  const [selectedUser, setSelectedUser] = React.useState<any>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (params?.userId) {
       const d = data.find((d) => d.id === Number(params?.userId));
       setSelectedUser(d);
