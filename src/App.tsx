@@ -7,7 +7,7 @@ function App() {
     <>
       <ChakraProvider>
         <BrowserRouter>
-          <Remote />
+            <Remote />
         </BrowserRouter>
       </ChakraProvider>
     </>

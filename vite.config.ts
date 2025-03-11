@@ -35,6 +35,8 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './User': './src/app/pages/User.tsx',
+        './SharedContext': './src/app/providers/AppContext.tsx',
+        './SharedStore': './src/app/store/AppStore.ts',
       },
       shared: {
         react: { requiredVersion: '^19.0.0' },
@@ -43,6 +45,7 @@ export default defineConfig({
         '@chakra-ui/react': { requiredVersion: '2' },
         '@emotion/react': { requiredVersion: '^11.14.0' },
         '@emotion/styled': { requiredVersion: '^11.14.0' },
+        zustand: { requiredVersion: '^5.0.3',  },
       },
     }),
   ],

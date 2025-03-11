@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { Box, HStack, Spinner, Text } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function TempUser() {
@@ -17,7 +18,14 @@ function TempUser() {
     onInit();
   }, []);
 
-  return <div>Loading</div>;
+  return (
+    <Box mt={20}>
+      <HStack justifyContent={'center'}>
+        <Spinner />
+        <Text>Loading Remote...</Text>
+      </HStack>
+    </Box>
+  );
 }
 
 export default TempUser;
